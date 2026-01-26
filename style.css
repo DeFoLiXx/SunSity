@@ -1,0 +1,332 @@
+:root {
+  --primary-green: #149c1f;
+  --accent-yellow: #FFC107;
+  --dark-bg: #1A1A1A;
+  --text-main: #333333;
+  --white: #FFFFFF;
+
+  --br-cards: 16px;
+  --br-buttons: 50px;
+
+  --font-main: 'Roboto', 'Open Sans', sans-serif;
+}
+
+/* Базовые стили */
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+header .logo {
+  font-weight: bold;
+  color: var(--accent-yellow);
+  font-size: 1.2rem;
+}
+header .btn-call {
+  background: var(--primary-green);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: var(--br-buttons);
+  font-weight: bold;
+}
+
+/* Hero */
+.hero, .menu-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  background: #ddd url('images/placeholder-hero.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.menu-hero .menu-content .icon {
+  font-size: 4rem;
+}
+.hero .overlay, .menu-hero .overlay {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content, .menu-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+.btn {
+  padding: 12px 24px;
+  border-radius: var(--br-buttons);
+  font-weight: bold;
+}
+.btn-primary {
+  background: var(--primary-green);
+  color: var(--white);
+}
+.btn-secondary {
+  background: var(--accent-yellow);
+  color: #000;
+}
+.btn-outline {
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+  background: transparent;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+.underline {
+  width: 60px;
+  height: 3px;
+  background: var(--primary-green);
+  margin: 8px auto 16px;
+}
+
+/* Banquets */
+.banquets {
+  padding: 20px;
+}
+.banquets .banquet-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.hall-card {
+  background: var(--white);
+  border-radius: var(--br-cards);
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.hall-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Menu items */
+.menu-items {
+  padding: 20px;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.item-info h4 { font-weight: bold; margin: 0 0 5px; }
+.item-info .weight { color: #666; font-size: 0.9rem; margin:0; }
+.item-info .price { color: #000; font-weight: bold; font-size: 1.1rem; margin:0; }
+
+/* Promo Lunch */
+.lunch-card {
+  background: var(--white);
+  border-radius: var(--br-cards);
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ===== Footer CTA ===== */
+.menu-footer-cta {
+  background: #222 url('images/placeholder-footer.jpg') center / cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.menu-footer-cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.menu-footer-cta p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.menu-footer-cta .btn {
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 12px 30px;
+  margin: 0 5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+/* Кнопка залитая (primary) */
+.menu-footer-cta .btn-primary {
+  background: #ff7f50;
+  color: #fff;
+}
+
+/* Кнопка теперь тоже залита для "На головну" */
+.menu-footer-cta .btn-outline {
+  background: #555; /* заливка вместо прозрачного */
+  color: #fff;
+  border: none;
+}
+
+.menu-footer-cta .btn:hover {
+  opacity: 0.8;
+}
+
+/* Ссылки телефон и адрес */
+.footer-contacts a {
+  color: #fff; /* белый цвет */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-contacts a:hover {
+  text-decoration: underline; /* чтобы понять, что кликабельно */
+  color: #ff7f50; /* легкий эффект при наведении */
+}
+/* Footer */
+.footer {
+  background: url('images/4.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Контейнер контента футера */
+.footer-content {
+  display: flex;
+  flex-direction: column; /* колонка */
+  align-items: center; /* по центру горизонтально */
+  gap: 30px; /* расстояние между блоками */
+}
+
+/* Ссылки телефон и адрес */
+.footer-contacts a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-contacts a:hover {
+  text-decoration: underline;
+  color: #ff7f50; /* легкий эффект при наведении */
+}
+
+/* Список услуг */
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-services li {
+  margin: 5px 0;
+}
+
+
+/* Divider */
+.menu-divider {
+  border: none;
+  height: 2px;
+  background: #ccc;
+  width: 60px;
+  margin: 10px auto;
+}
+
+/* Responsive Desktop */
+@media(min-width:1024px){
+  .menu-content .icon {
+    font-size: 8rem;
+  }
+  .menu-item img { width: 120px; height: 120px; }
+}
+
+/* ===== МИНИ-НАВИГАЦИЯ: 2 СТРОКИ НА ТЕЛЕФОНЕ ===== */
+@media (max-width: 768px) {
+  .mini-cards {
+    display: flex;
+    flex-direction: column;     /* важно */
+    flex-wrap: wrap;            /* перенос */
+    height: 120px;              /* высота = 2 строки */
+    overflow-x: auto;           /* горизонтальный скролл */
+    overflow-y: hidden;
+    gap: 10px;
+    padding: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mini-card {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+/* ===== СКРОЛЛБАР ДЛЯ МИНИ-КАРТОЧЕК (МОБИЛЬНЫЕ) ===== */
+@media (max-width: 768px) {
+  .mini-cards {
+    scrollbar-width: thin;            /* Firefox */
+    scrollbar-color: #ff7f50 #eee;
+  }
+
+  .mini-cards::-webkit-scrollbar {
+    height: 6px;                      /* высота полоски */
+  }
+
+  .mini-cards::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 10px;
+  }
+
+  .mini-cards::-webkit-scrollbar-thumb {
+    background: #ff7f50;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sun City Cafe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      ☀ SUN CITY
+    </div>
+    <a href="tel:0689346464" class="btn-call">📞 Дзвонити</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Cafe "Sun City"</h1>
+      <p>Смачно • Затишно • Домашньо</p>
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn btn-primary">🍴 Переглянути меню</a>
+        <a href="tel:0689346464" class="btn btn-secondary">📞 068 934 64 64</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>Про наше кафе</h2>
+    <div class="underline"></div>
+    <p>Затишне кафе у Феофанії, де кожна страва готується з любов'ю та використанням найсвіжіших інгредієнтів.</p>
+    <img src="images/placeholder-about.jpg" alt="Кафе">
+  </section>
+
+  <!-- Banquets Section -->
+<section class="banquets">
+  <div class="banquet-header">
+    <span class="icon">🥂</span>
+    <h3>Банкети та святкування</h3>
+  </div>
+  <p>Кафе ідеально підходить для проведення банкетів, корпоративів та сімейних свят.</p>
+
+  <!-- Объединенная карточка с слайдером -->
+  <div class="hall-card">
+    <div class="hall-header">👥 Основний зал: до 35 осіб / 🚪 Банкетний зал: до 25 осіб</div>
+    
+    <div class="slider">
+      <button class="prev">&#10094;</button>
+      
+      <div class="slides">
+        <img src="images/2.jpg" alt="Основний зал">
+        <img src="images/1.jpg" alt="Банкетний зал">
+      </div>
+
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .banquets {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .hall-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .hall-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 200%; /* 2 картинки */
+  }
+
+  .slides img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  @media (max-width: 600px) {
+    .slides img {
+      max-height: 200px;
+    }
+  }
+</style>
+
+<script>
+  const slides = document.querySelector('.slides');
+  const slideImages = document.querySelectorAll('.slides img');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  let index = 0;
+
+  function showSlide(i) {
+    if(i < 0) index = slideImages.length - 1;
+    else if(i >= slideImages.length) index = 0;
+    else index = i;
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
+  prev.addEventListener('click', () => showSlide(index - 1));
+  next.addEventListener('click', () => showSlide(index + 1));
+</script>
+<!-- Footer -->
+<footer class="footer" style="background-image: url('images/4.jpg');">
+  <div class="footer-content">
+    <div class="footer-contacts">
+      <p>📞 <a href="tel:+380689346464">068 934 64 64</a></p>
+      <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Sun+City+cafe" target="_blank">вул. Метрологічна, 48, Київ, Україна, 02000</a></p>
+      <p>🕒 Пн-Нд: 10:00 – 21:00</p>
+    </div>
+    <div class="footer-services">
+      <ul>
+        <li>✅ Їжа на винос</li>
+        <li>✅ Безготівкова оплата</li>
+        <li>✅ NFC-платежі</li>
+        <li>✅ Сімейне середовище</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+

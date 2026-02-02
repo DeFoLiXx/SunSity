@@ -35,7 +35,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  padding: 1px 7px;
   position: sticky;
   top: 0;
   background: var(--white);
@@ -50,9 +50,15 @@ header .logo {
 header .btn-call {
   background: var(--primary-green);
   color: var(--white);
-  padding: 8px 16px;
+  padding: 10px 16px;
   border-radius: var(--br-buttons);
   font-weight: bold;
+}
+.logo img {
+  height: 60px;      /* или 32–48px */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* Hero */
@@ -235,7 +241,7 @@ header .btn-call {
 }
 /* Footer */
 .footer {
-  background: url('images/4.jpg') center/cover no-repeat;
+  background: url('images/footer.jpg') center/cover no-repeat;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -251,7 +257,7 @@ header .btn-call {
 
 /* Ссылки телефон и адрес */
 .footer-contacts a {
-  color: #fff;
+  color: #149c1f;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -289,44 +295,69 @@ header .btn-call {
   }
   .menu-item img { width: 120px; height: 120px; }
 }
+.mini-cards-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* скрываем системный скролл */
+}
 
-/* ===== МИНИ-НАВИГАЦИЯ: 2 СТРОКИ НА ТЕЛЕФОНЕ ===== */
+.mini-cards {
+  display: flex;
+  flex-wrap: nowrap; /* горизонтальный ряд по умолчанию */
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.mini-cards::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.mini-card {
+  flex: 0 0 auto;       /* не сжимаются */
+  min-width: 120px;      /* минимальная ширина, регулируемая */
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Фейковый скроллбар */
+.fake-scrollbar {
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  right: 10px;
+  height: 6px;
+  background: #eee;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.fake-thumb {
+  position: absolute;
+  height: 100%;
+  background: #676767;
+  border-radius: 10px;
+  transform: translateX(0);
+  transition: none;
+  pointer-events: none;
+}
+
+/* ===== Адаптив на телефоне ===== */
 @media (max-width: 768px) {
   .mini-cards {
-    display: flex;
-    flex-direction: column;     /* важно */
-    flex-wrap: wrap;            /* перенос */
-    height: 120px;              /* высота = 2 строки */
-    overflow-x: auto;           /* горизонтальный скролл */
-    overflow-y: hidden;
-    gap: 10px;
-    padding: 10px;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;       /* перенос на 2 ряда */
+    height: 120px;         /* 2 ряда */
   }
-
   .mini-card {
-    flex: 0 0 auto;
-    white-space: nowrap;
+    min-width: calc(50% - 10px); /* две карточки на ряд */
   }
 }
-/* ===== СКРОЛЛБАР ДЛЯ МИНИ-КАРТОЧЕК (МОБИЛЬНЫЕ) ===== */
-@media (max-width: 768px) {
-  .mini-cards {
-    scrollbar-width: thin;            /* Firefox */
-    scrollbar-color: #ff7f50 #eee;
-  }
 
-  .mini-cards::-webkit-scrollbar {
-    height: 6px;                      /* высота полоски */
-  }
-
-  .mini-cards::-webkit-scrollbar-track {
-    background: #eee;
-    border-radius: 10px;
-  }
-
-  .mini-cards::-webkit-scrollbar-thumb {
-    background: #ff7f50;
-    border-radius: 10px;
-  }
-}

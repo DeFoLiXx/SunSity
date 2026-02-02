@@ -12,7 +12,7 @@
   <!-- Header -->
   <header>
     <div class="logo">
-      ☀ SUN CITY
+   <img src="images/logo.png" alt="SUN CITY">
     </div>
     <a href="tel:0689346464" class="btn-call">📞 Дзвонити</a>
   </header>
@@ -21,7 +21,7 @@
   <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Cafe "Sun City"</h1>
+      <h1>Sun City</h1>
       <p>Смачно • Затишно • Домашньо</p>
       <div class="hero-buttons">
         <a href="menu.html" class="btn btn-primary">🍴 Переглянути меню</a>
@@ -29,13 +29,83 @@
       </div>
     </div>
   </section>
-
   <!-- About Section -->
   <section class="about">
-    <h2>Про наше кафе</h2>
-    <div class="underline"></div>
-    <p>Затишне кафе у Феофанії, де кожна страва готується з любов'ю та використанням найсвіжіших інгредієнтів.</p>
-    <img src="images/placeholder-about.jpg" alt="Кафе">
+    <div class="section-header">
+      <h2>Про наше кафе</h2>
+      <div class="underline"></div>
+      <p>Sun City — це тепла атмосфера, домашня кухня та простір для затишних зустрічей у Феофанії.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Домашній смак</h3>
+        <p>Готуємо з турботою, щоб кожна страва дарувала відчуття комфорту та свята.</p>
+      </div>
+      <div class="about-card">
+        <h3>Події та свята</h3>
+        <p>Підберемо формат для днів народження, сімейних вечерь чи корпоративів.</p>
+      </div>
+      <div class="about-card">
+        <h3>Затишок щодня</h3>
+        <p>Світлий інтер’єр, приємна музика та сервіс, що робить відпочинок легким.</p>
+      </div>
+    </div>
+
+    <div class="media-gallery">
+      <div class="media-group">
+        <div class="media-title">Банкетний зал</div>
+        <div class="media-row">
+          <figure class="media-item">
+            <img src="images/banquet-1.jpg" alt="Банкетний зал — фото 1">
+            <figcaption>Фото 1</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/banquet-2.jpg" alt="Банкетний зал — фото 2">
+            <figcaption>Фото 2</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="media-group">
+        <div class="media-title">Основний зал</div>
+        <div class="media-row">
+          <figure class="media-item">
+            <video controls poster="images/main-hall-video-1.jpg">
+              <source src="images/осн22.mp4" type="video/mp4">
+              Ваш браузер не підтримує відео.
+            </video>
+            <figcaption>Один зі столиків основної зали</figcaption>
+          </figure>
+          <figure class="media-item">
+            <video controls poster="images/main-hall-video-2.jpg">
+              <source src="images/осн11.mp4" type="video/mp4">
+              Ваш браузер не підтримує відео.
+            </video>
+            <figcaption>Уся основна зала</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure class="media-item">
+            <img src="images/main-hall-1.jpg" alt="Основний зал — фото 1">
+            <figcaption>Фото 1</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/main-hall-2.jpg" alt="Основний зал — фото 2">
+            <figcaption>Фото 2</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="media-group">
+        <div class="media-title">Кава з бару</div>
+        <div class="media-row single">
+          <figure class="media-item">
+            <img src="images/bar-coffee.jpg" alt="Кава з бару">
+            <figcaption>Свіжозварена кава</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Banquets Section -->
@@ -62,7 +132,6 @@
     </div>
   </div>
 </section>
-
 <style>
   .banquets {
     padding: 20px;
@@ -143,7 +212,7 @@
   next.addEventListener('click', () => showSlide(index + 1));
 </script>
 <!-- Footer -->
-<footer class="footer" style="background-image: url('images/4.jpg');">
+<footer class="footer" style="background-image: url('images/footer.jpg');">
   <div class="footer-content">
     <div class="footer-contacts">
       <p>📞 <a href="tel:+380689346464">068 934 64 64</a></p>

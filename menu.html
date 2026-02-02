@@ -8,33 +8,20 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 
-  <style>
-    /* ===== Base ===== */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fdfdfd;
-      color: #333;
-    }
+<style>
+  /* ===== Base ===== */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    color: #333;
+  }
 
-    /* ===== Header ===== */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
 
     .btn-call {
       text-decoration: none;
@@ -238,7 +225,9 @@
 </head>   
 <body> 
  <header> 
- <div class="logo">☀ SUN CITY</div>
+ <div class="logo">
+   <img src="images/logo.png" alt="SUN CITY">
+  </div>
  <a href="tel:0689346464" class="btn-call">📞 Дзвонити</a>
 </header> 
   <!-- Hero / Наше меню -->
@@ -298,48 +287,145 @@
   margin-top: 10px;
 }
 </style> 
-</style> 
-</style> 
+<div class="mini-cards-wrapper">
 
-<!-- Mini navigation cards -->
-<div class="mini-cards">
-  <div class="mini-card" onclick="document.getElementById('breakfast').scrollIntoView({behavior: 'smooth'})">🍳 Сніданки</div>
-  <div class="mini-card" onclick="document.getElementById('cold-snacks').scrollIntoView({behavior: 'smooth'})">❄️ Холодні закуски</div>
-  <div class="mini-card" onclick="document.getElementById('beer-snacks').scrollIntoView({behavior: 'smooth'})">🍺 Закуски до пива</div>
-  <div class="mini-card" onclick="document.getElementById('hot-snacks').scrollIntoView({behavior: 'smooth'})">🔥 Гарячі закуски</div>
-  <div class="mini-card" onclick="document.getElementById('soups').scrollIntoView({behavior: 'smooth'})">🍲 Перші страви</div>
-  <div class="mini-card" onclick="document.getElementById('salads').scrollIntoView({behavior: 'smooth'})">🥗 Салати</div>
-  <div class="mini-card" onclick="document.getElementById('grill').scrollIntoView({behavior: 'smooth'})">🍖 Страви на мангалі</div>
-  <div class="mini-card" onclick="document.getElementById('hotdishes').scrollIntoView({behavior: 'smooth'})">🍝 Гарячі страви</div>
-  <div class="mini-card" onclick="document.getElementById('pizza').scrollIntoView({behavior: 'smooth'})">🍕 Піца</div>
-  <div class="mini-card" onclick="document.getElementById('burgers').scrollIntoView({behavior: 'smooth'})">🍔 Бургери</div>
-  <div class="mini-card" onclick="document.getElementById('kids').scrollIntoView({behavior: 'smooth'})">👶 Дитяче меню</div>
-  <div class="mini-card" onclick="document.getElementById('desserts').scrollIntoView({behavior: 'smooth'})">🍰 Десерти</div>
-  <div class="mini-card" onclick="document.getElementById('drinks').scrollIntoView({behavior: 'smooth'})">🥤Напої</div>
-  <div class="mini-card" onclick="document.getElementById('banquet').scrollIntoView({behavior: 'smooth'})">🎉 Банкетне меню</div>
-  <div class="mini-card" onclick="document.getElementById('sets').scrollIntoView({behavior: 'smooth'})">🍽️ Набори</div>
+  <!-- Левая стрелка 
+  <button class="scroll-arrow left" aria-label="Scroll left">‹</button>-->
+
+  <!-- Ряд мини-карточек -->
+  <div class="mini-cards">
+    <div class="mini-card" onclick="document.getElementById('breakfast').scrollIntoView({behavior: 'smooth'})">🍳 Сніданки</div>
+    <div class="mini-card" onclick="document.getElementById('cold-snacks').scrollIntoView({behavior: 'smooth'})">❄️ Холодні закуски</div>
+    <div class="mini-card" onclick="document.getElementById('beer-snacks').scrollIntoView({behavior: 'smooth'})">🍺 Закуски до пива</div>
+    <div class="mini-card" onclick="document.getElementById('hot-snacks').scrollIntoView({behavior: 'smooth'})">🔥 Гарячі закуски</div>
+    <div class="mini-card" onclick="document.getElementById('soups').scrollIntoView({behavior: 'smooth'})">🍲 Перші страви</div>
+    <div class="mini-card" onclick="document.getElementById('salads').scrollIntoView({behavior: 'smooth'})">🥗 Салати</div>
+    <div class="mini-card" onclick="document.getElementById('grill').scrollIntoView({behavior: 'smooth'})">🍖 Страви на мангалі</div>
+    <div class="mini-card" onclick="document.getElementById('hotdishes').scrollIntoView({behavior: 'smooth'})">🍝 Гарячі страви</div>
+    <div class="mini-card" onclick="document.getElementById('pizza').scrollIntoView({behavior: 'smooth'})">🍕 Піца</div>
+    <div class="mini-card" onclick="document.getElementById('burgers').scrollIntoView({behavior: 'smooth'})">🍔 Бургери</div>
+    <div class="mini-card" onclick="document.getElementById('kids').scrollIntoView({behavior: 'smooth'})">👶 Дитяче меню</div>
+    <div class="mini-card" onclick="document.getElementById('desserts').scrollIntoView({behavior: 'smooth'})">🍰 Десерти</div>
+    <div class="mini-card" onclick="document.getElementById('drinks').scrollIntoView({behavior: 'smooth'})">🥤 Напої</div>
+    <div class="mini-card" onclick="document.getElementById('banquet').scrollIntoView({behavior: 'smooth'})">🎉 Банкетне меню</div>
+    <div class="mini-card" onclick="document.getElementById('sets').scrollIntoView({behavior: 'smooth'})">🍽️ Набори</div>
+  </div>
+
+  <!-- Правая стрелка 
+  <button class="scroll-arrow right" aria-label="Scroll right">›</button>-->
+
+  <!-- Фейковый скроллбар -->
+  <div class="fake-scrollbar">
+    <div class="fake-thumb"></div>
+  </div>
+
 </div>
+
+
 <!-- Menu Items -->
 <section class="menu-items">
-  <!-- 🍳 Сніданки -->
-  <article class="category" id="breakfast">
-   <h3>🍳 Сніданки</h3>
-   <div class="menu-item"><img alt=""><div class="item-info"><h4>Яєчня по-англійськи</h4><p class="weight">280</p><p class="price">190.00</p></div>
-  </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Омлет з двох яєць</h4><p class="weight">—</p><p class="price">75.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Ліниві вареники (солодкі)</h4><p class="weight">250/50/15</p><p class="price">175.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Тост з куркою гриль та яйцем пашот</h4><p class="weight">250</p><p class="price">174.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Рол з куркою та овочами</h4><p class="weight">270</p><p class="price">188.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Дует брускет</h4><p class="weight">210</p><p class="price">185.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Млинці з джемом</h4><p class="weight">130/50</p><p class="price">105.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Млинці з яблуками</h4><p class="weight">200/25/25</p><p class="price">155.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Млинці з сиром</h4><p class="weight">200/50</p><p class="price">160.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Хліб</h4><p class="weight">—</p><p class="price">25.00</p></div>
-</div> </article> 
-  <!-- ❄️ Холодні закуски -->
-  <article class="category" id="cold-snacks">
-   <h3>❄️ Холодні закуски</h3>
+<!-- 🍳 Сніданки -->
+<article class="category" id="breakfast">
+  <h3>🍳 Сніданки</h3>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Яєчня по англійській.jpg" alt="Яєчня по-англійськи" loading="lazy">
+    <div class="item-info">
+      <h4>Яєчня по-англійськи</h4>
+      <p class="weight">280</p>
+      <p class="price">190.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Омлет з двох яєць" loading="lazy">
+    <div class="item-info">
+      <h4>Омлет з двох яєць</h4>
+      <p class="weight">—</p>
+      <p class="price">75.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Ліниві вареники (солодкі)" loading="lazy">
+    <div class="item-info">
+      <h4>Ліниві вареники (солодкі)</h4>
+      <p class="weight">250/50/15</p>
+      <p class="price">175.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Тост з куркою гриль та яйцем пашот" loading="lazy">
+    <div class="item-info">
+      <h4>Тост з куркою гриль та яйцем пашот</h4>
+      <p class="weight">250</p>
+      <p class="price">174.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Рол з куркою та овочами.jpg" alt="Рол з куркою та овочами" loading="lazy">
+    <div class="item-info">
+      <h4>Рол з куркою та овочами</h4>
+      <p class="weight">270</p>
+      <p class="price">188.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Дует Брускет.jpg" alt="Дует брускет" loading="lazy">
+    <div class="item-info">
+      <h4>Дует брускет</h4>
+      <p class="weight">210</p>
+      <p class="price">185.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Млинці з джемом" loading="lazy">
+    <div class="item-info">
+      <h4>Млинці з джемом</h4>
+      <p class="weight">130/50</p>
+      <p class="price">105.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Млинці з яблуками" loading="lazy">
+    <div class="item-info">
+      <h4>Млинці з яблуками</h4>
+      <p class="weight">200/25/25</p>
+      <p class="price">155.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Млинці з сиром.jpg" alt="Млинці з сиром" loading="lazy">
+    <div class="item-info">
+      <h4>Млинці з сиром</h4>
+      <p class="weight">200/50</p>
+      <p class="price">160.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Хліб" loading="lazy">
+    <div class="item-info">
+      <h4>Хліб</h4>
+      <p class="weight">—</p>
+      <p class="price">25.00</p>
+    </div>
+  </div>
+
+</article>
+
+  <!-- ❄️ Холодні закуски -->
+<article class="category" id="cold-snacks">
+  <h3>❄️ Холодні закуски</h3>
+
+  <div class="menu-item">
+    <img src="images/Парфе з качиної печінки.jpg" alt="Парфе з качиної печінки" loading="lazy">
     <div class="item-info">
       <h4>Парфе з качиної печінки</h4>
       <p class="weight">90/50/30/30</p>
@@ -347,7 +433,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Тар-тар з лосося" loading="lazy">
     <div class="item-info">
       <h4>Тар-тар з лосося</h4>
       <p class="weight">150/100</p>
@@ -355,7 +442,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Сирна Європа.jpg" alt="Сирна Європа" loading="lazy">
     <div class="item-info">
       <h4>Сирна Європа</h4>
       <p class="weight">180/100</p>
@@ -363,7 +451,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Сирна Україна" loading="lazy">
     <div class="item-info">
       <h4>Сирна Україна</h4>
       <p class="weight">200/50</p>
@@ -371,7 +460,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Мʼясна Європа.jpg" alt="М’ясна Європа" loading="lazy">
     <div class="item-info">
       <h4>М’ясна Європа</h4>
       <p class="weight">210</p>
@@ -379,7 +469,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Асорті сала.jpg" alt="Асорті з сала" loading="lazy">
     <div class="item-info">
       <h4>Асорті з сала</h4>
       <p class="weight">200/60</p>
@@ -387,28 +478,58 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Оселедець або скумбрія власного посолу.jpg" alt="Оселедець або скумбрія власного посолу  з картоплею та мар. цибулею" loading="lazy">
     <div class="item-info">
-      <h4>Оселедець або скумбрія з картоплею</h4>
+      <h4>Оселедець або скумбрія власного посолу  з картоплею та мар. цибулею</h4>
       <p class="weight">150/100/50</p>
       <p class="price">215.00</p>
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Млинці з лососем.jpg" alt="Млинці з лососем" loading="lazy">
     <div class="item-info">
       <h4>Млинці з лососем</h4>
       <p class="weight">230/30</p>
       <p class="price">274.00</p>
     </div>
   </div>
-  </article>
 
-  <!-- 🍺 Закуски до пива -->
-  <article class="category" id="beer-snacks">
+    <div class="menu-item">
+    <img src="images/Домашні соління.jpg" alt="Домашні соління" loading="lazy">
+    <div class="item-info">
+      <h4>Домашні соління</h4>
+      <p class="weight">350</p>
+      <p class="price">180.00</p>
+    </div>
+  </div>
+
+    <div class="menu-item">
+    <img src="images/Язик телячий з хроном.jpg" alt="Язик телячий з хроном" loading="lazy">
+    <div class="item-info">
+      <h4>Язик телячий з хроном</h4>
+      <p class="weight">150/50 </p>
+      <p class="price">315.00</p>
+    </div>
+  </div>
+
+       <div class="menu-item">
+    <img src="images/Рулетики з баклажанів.jpg" alt="Рулетики з баклажанів з гострою начинкою" loading="lazy">
+    <div class="item-info">
+      <h4>Рулетики з баклажанів з гострою начинкою</h4>
+      <p class="weight">250 </p>
+      <p class="price">230.00</p>
+    </div>
+  </div>
+</article>
+
+<!-- 🍺 Закуски до пива -->
+<article class="category" id="beer-snacks">
   <h3>🍺 Закуски до пива</h3>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Ароматні крильця в паніровці" loading="lazy">
     <div class="item-info">
       <h4>Ароматні крильця в паніровці</h4>
       <p class="weight">250</p>
@@ -416,7 +537,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Курячі нагетси Панко" loading="lazy">
     <div class="item-info">
       <h4>Курячі нагетси Панко</h4>
       <p class="weight">200</p>
@@ -424,21 +546,21 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Тарілка пивних ласощів" loading="lazy">
     <div class="item-info">
       <h4>Тарілка пивних ласощів</h4>
-      <p class="weight">250</p>
+      <p class="weight">250 (салямі, хамон, лаваш з сулугуні, ковбаски охотничі, сухарики)</p>
       <p class="price">255.00</p>
     </div>
   </div>
-
-  </article>
-
+</article>
   <!-- 🔥 Гарячі закуски -->
-  <article class="category" id="hot-snacks">
-<h3>🔥 Гарячі закуски</h3>
+<article class="category" id="hot-snacks">
+  <h3>🔥 Гарячі закуски</h3>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Крильця теріякі.jpg" alt="Крильця теріякі з мікс салатом" loading="lazy">
     <div class="item-info">
       <h4>Крильця теріякі з мікс салатом</h4>
       <p class="weight">200/90</p>
@@ -446,7 +568,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Лаваш з сиром сулугуні" loading="lazy">
     <div class="item-info">
       <h4>Лаваш з сиром сулугуні</h4>
       <p class="weight">200</p>
@@ -454,7 +577,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Деруни з грибамишварками.jpg" alt="Деруни з грибами / шкварками" loading="lazy">
     <div class="item-info">
       <h4>Деруни з грибами / шкварками</h4>
       <p class="weight">250/30/50</p>
@@ -462,7 +586,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Креветки Батерфляй" loading="lazy">
     <div class="item-info">
       <h4>Креветки Батерфляй</h4>
       <p class="weight">120/40/40</p>
@@ -470,7 +595,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Пательня із свіжиною" loading="lazy">
     <div class="item-info">
       <h4>Пательня із свіжиною</h4>
       <p class="weight">500</p>
@@ -478,7 +604,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Ковбаски на грилі з аджикою та грінками" loading="lazy">
     <div class="item-info">
       <h4>Ковбаски на грилі з аджикою та грінками</h4>
       <p class="weight">200/40/40</p>
@@ -486,7 +613,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Телячий язик на грилі" loading="lazy">
     <div class="item-info">
       <h4>Телячий язик на грилі</h4>
       <p class="weight">200/50</p>
@@ -494,15 +622,17 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Вареники з м’ясом / картоплею та грибами (сметана/шкварки)" loading="lazy">
     <div class="item-info">
-      <h4>Вареники з м’ясом / картоплею та грибами</h4>
+      <h4>Вареники з м’ясом / картоплею та грибами (сметана/шкварки)</h4>
       <p class="weight">300/50</p>
       <p class="price">215.00</p>
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Пельмені у вершково-сирному соусі та печерицями" loading="lazy">
     <div class="item-info">
       <h4>Пельмені у вершково-сирному соусі та печерицями</h4>
       <p class="weight">350</p>
@@ -510,7 +640,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Баклажан запечений з моцарелою" loading="lazy">
     <div class="item-info">
       <h4>Баклажан запечений з моцарелою</h4>
       <p class="weight">280</p>
@@ -518,24 +649,80 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/Міні чебуреки.jpg" alt="Міні-чебуреки з соусом Сацикі" loading="lazy">
     <div class="item-info">
       <h4>Міні-чебуреки з соусом Сацикі</h4>
       <p class="weight">250/50</p>
       <p class="price">235.00</p>
     </div>
   </div>
-  </article>
-  <!-- 🍲 Перші страви -->
-  <article class="category" id="soups">
-<h3>🍲 Перші страви</h3> <div class="menu-item"><img alt=""> <div class="item-info"> <h4>Курячий бульйон з сухариками</h4> <p class="weight">350/15</p> <p class="price">140.00</p> </div> </div> <div class="menu-item"><img alt=""> <div class="item-info"> <h4>Борщ український з салом та грінками</h4> <p class="weight">440/25/40/40</p> <p class="price">160.00</p> </div> </div> <div class="menu-item"><img alt=""> <div class="item-info"> <h4>Крем-суп грибний</h4> <p class="weight">400</p> <p class="price">190.00</p> </div> </div> <div class="menu-item"><img alt=""> <div class="item-info"> <h4>Французький цибулевий суп з тостом</h4> <p class="weight">350/50</p> <p class="price">205.00</p> </div> </div> <div class="menu-item"><img alt=""> <div class="item-info"> <h4>Юшка рибна</h4> <p class="weight">400</p> <p class="price">195.00</p> </div> </div> <div class="menu-item"><img alt=""> <div class="item-info"> <h4>Томатний суп з морепродуктами</h4> <p class="weight">400</p> <p class="price">190.00</p> </div> </div>
-  </article>
+</article>
+ <!-- 🍲 Перші страви -->
+<article class="category" id="soups">
+  <h3>🍲 Перші страви</h3>
 
-  <!-- 🥗 Салати -->
-  <article class="category" id="salads">
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Курячий бульйон з сухариками" loading="lazy">
+    <div class="item-info">
+      <h4>Курячий бульйон з сухариками</h4>
+      <p class="weight">350/15</p>
+      <p class="price">140.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Борщ український з салом та грінками" loading="lazy">
+    <div class="item-info">
+      <h4>Борщ український з салом та грінками</h4>
+      <p class="weight">440/25/40/40</p>
+      <p class="price">160.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Крем-суп грибний" loading="lazy">
+    <div class="item-info">
+      <h4>Крем-суп грибний</h4>
+      <p class="weight">400</p>
+      <p class="price">190.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Французький цибулевий суп з тостом" loading="lazy">
+    <div class="item-info">
+      <h4>Французький цибулевий суп з тостом</h4>
+      <p class="weight">350/50</p>
+      <p class="price">205.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Юшка рибна" loading="lazy">
+    <div class="item-info">
+      <h4>Юшка рибна</h4>
+      <p class="weight">400</p>
+      <p class="price">195.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Томатний суп з морепродуктами" loading="lazy">
+    <div class="item-info">
+      <h4>Томатний суп з морепродуктами</h4>
+      <p class="weight">400</p>
+      <p class="price">190.00</p>
+    </div>
+  </div>
+</article>
+
+<!-- 🥗 Салати -->
+<article class="category" id="salads">
   <h3>🥗 Салати</h3>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/С-т Грецький.jpg" alt="Салат «Грецький»" loading="lazy">
     <div class="item-info">
       <h4>Салат «Грецький»</h4>
       <p class="weight">250</p>
@@ -543,7 +730,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/С-т Цезар з куркою.jpg" alt="Салат «Цезар» з куркою та беконом" loading="lazy">
     <div class="item-info">
       <h4>Салат «Цезар» з куркою та беконом</h4>
       <p class="weight">270</p>
@@ -551,7 +739,8 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/С-т Цезар з креветками.jpg" alt="Салат «Цезар» з тигровими креветками" loading="lazy">
     <div class="item-info">
       <h4>Салат «Цезар» з тигровими креветками</h4>
       <p class="weight">230</p>
@@ -559,83 +748,547 @@
     </div>
   </div>
 
-  <div class="menu-item"><img alt="">
+  <div class="menu-item">
+    <img src="images/С-т Капрезе.jpg" alt="Салат «Капрезе»" loading="lazy">
     <div class="item-info">
       <h4>Салат «Капрезе»</h4>
       <p class="weight">300</p>
       <p class="price">260.00</p>
     </div>
   </div>
-  </article>
+
+  <div class="menu-item">
+  <img src="images/Томати з бринзою.jpg" alt="Томати з бринзою та базиліком" loading="lazy">
+  <div class="item-info">
+    <h4>Томати з бринзою та базиліком</h4>
+    <p class="weight">300</p>
+    <p class="price">230.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/С-т Мисливець.jpg" alt="Салат «Мисливець»" loading="lazy">
+  <div class="item-info">
+    <h4>Салат «Мисливець»</h4>
+    <p class="weight">250</p>
+    <p class="price">260.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/С-т з курячої печінки.jpg" alt="Теплий салат з курячою печінкою" loading="lazy">
+  <div class="item-info">
+    <h4>Теплий салат з курячою печінкою під медово-гірчичним соусом</h4>
+    <p class="weight">220</p>
+    <p class="price">258.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/С-т теплий з мікс овочами і телятиною.jpg" alt="Теплий салат з мікс овочами та телятиною гриль" loading="lazy">
+  <div class="item-info">
+    <h4>Теплий салат з мікс овочами та телятиною гриль</h4>
+    <p class="weight">280</p>
+    <p class="price">315.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/С-т з овочів гриль.jpg" alt="Теплий салат з овочів гриль" loading="lazy">
+  <div class="item-info">
+    <h4>Теплий салат з овочів гриль</h4>
+    <p class="weight">280</p>
+    <p class="price">280.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/С-т теплий SunCity.jpg" alt="Теплий салат SunCity" loading="lazy">
+  <div class="item-info">
+    <h4>Теплий салат SunCity</h4>
+    <p class="weight">280</p>
+    <p class="price">300.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Мікс салат з лососем і каперсами.jpg" alt="Мікс салат з лососем та каперсами" loading="lazy">
+  <div class="item-info">
+    <h4>Мікс салат з лососем та каперсами</h4>
+    <p class="weight">240</p>
+    <p class="price">300.00</p>
+  </div>
+</div>
+
+</article>
+
   <!-- 🍖 Страви на мангалі -->
-  <article class="category" id="grill">
- <h3>🍖 Страви на мангалі</h3> 
-            <div class="menu-item"><img alt=""><div class="item-info"><h4>Шашлик зі свинини</h4><p class="weight">200/50</p><p class="price">365.00</p></div>
-          </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Шашлик з курячої грудки</h4><p class="weight">200/50</p><p class="price">285.00</p></div>
-        </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Шашлик з кур. стегна</h4><p class="weight">250/50</p><p class="price">285.00</p></div>
-      </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Мисливські ковбаски на мангалі</h4><p class="weight">150/50</p><p class="price">240.00</p></div>
-    </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Стейк зі свинини на кістці</h4><p class="weight">250/50</p><p class="price">370.00</p></div>
-  </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Каре телятини</h4><p class="weight">200/50</p><p class="price">380.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Свинячі реберця на мангалі</h4><p class="weight">250/50</p><p class="price">340.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Шашлик з курячих крилець</h4><p class="weight">250/50</p><p class="price">240.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Шашлик овочевий</h4><p class="weight">250</p><p class="price">235.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Запечена картопля з підчеревиною</h4><p class="weight">250</p><p class="price">170.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Шашлик з сома</h4><p class="weight">200/50</p><p class="price">410.00</p></div>
-</div> 
-  </article>
-  <!-- 🍝 Гарячі страви -->
-  <article class="category" id="hotdishes">
+<article class="category" id="grill">
+  <h3>🍖 Страви на мангалі</h3>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Шашлик зі свинини" loading="lazy">
+    <div class="item-info">
+      <h4>Шашлик зі свинини</h4>
+      <p class="weight">200/50</p>
+      <p class="price">365.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Шашлик із курячої грудки.jpg" alt="Шашлик з курячої грудки" loading="lazy">
+    <div class="item-info">
+      <h4>Шашлик з курячої грудки</h4>
+      <p class="weight">200/50</p>
+      <p class="price">285.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Ша-к із курячого бедра.jpg" alt="Шашлик з кур. стегна" loading="lazy">
+    <div class="item-info">
+      <h4>Шашлик з кур. стегна</h4>
+      <p class="weight">250/50</p>
+      <p class="price">285.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Мисливські ковбаски на мангалі" loading="lazy">
+    <div class="item-info">
+      <h4>Мисливські ковбаски на мангалі</h4>
+      <p class="weight">150/50</p>
+      <p class="price">240.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Стейк зі свинини на кістці" loading="lazy">
+    <div class="item-info">
+      <h4>Стейк зі свинини на кістці</h4>
+      <p class="weight">250/50</p>
+      <p class="price">370.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Каре телятини" loading="lazy">
+    <div class="item-info">
+      <h4>Каре телятини</h4>
+      <p class="weight">200/50</p>
+      <p class="price">380.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+  <img src="images/Свинячі реберця на мангалі.jpg" alt="Свинячі реберця на мангалі" loading="lazy">
+  <div class="item-info">
+    <h4>Свинячі реберця на мангалі</h4>
+    <p class="weight">250/50</p>
+    <p class="price">340.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Шашлик з курячих крилець.jpg" alt="Шашлик з курячих крилець" loading="lazy">
+  <div class="item-info">
+    <h4>Шашлик з курячих крилець</h4>
+    <p class="weight">250/50</p>
+    <p class="price">240.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Шашлик овочевий.jpg" alt="Шашлик овочевий" loading="lazy">
+  <div class="item-info">
+    <h4>Шашлик овочевий</h4>
+    <p class="weight">250</p>
+    <p class="price">235.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Запечена картопля з підчеревиною.jpg" alt="Запечена картопля з підчеревиною" loading="lazy">
+  <div class="item-info">
+    <h4>Запечена картопля з підчеревиною</h4>
+    <p class="weight">250</p>
+    <p class="price">170.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Шашлик з сома.jpg" alt="Шашлик з сома" loading="lazy">
+  <div class="item-info">
+    <h4>Шашлик з сома</h4>
+    <p class="weight">200/50</p>
+    <p class="price">410.00</p>
+  </div>
+</div>
+
+</article>
+
+<!-- 🍝 Гарячі страви -->
+<article class="category" id="hotdishes">
   <h3>🍝 Гарячі страви</h3>
-  <div class="menu-item"><img alt=""><div class="item-info"><h4>Запечені реберця зі свинини з картоплею</h4><p class="weight">280/100/50</p><p class="price">360.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Стейк зі свинячого ошийка</h4><p class="weight">230/50/120</p><p class="price">375.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Медальйони з свинини в беконі з соусом деміглас</h4><p class="weight">200/30/30</p><p class="price">375.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Телятина каре з овочами гриль</h4><p class="weight">200/50/60</p><p class="price">400.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Біфстроганов з телятини на подушці</h4><p class="weight">280/100</p><p class="price">380.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Куряче стегно на грилі</h4><p class="weight">250/50/30</p><p class="price">285.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Куряча грудка з моцарелою і томатами під соусом песто</h4><p class="weight">280</p><p class="price">360.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Кордон блю</h4><p class="weight">300/40/30</p><p class="price">345.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Курчата табака (на вагу)</h4><p class="weight">100/15</p><p class="price">95.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Качина грудка під винним соусом</h4><p class="weight">150/50/30</p><p class="price">380.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Філе лосося на подушці зі шпината</h4><p class="weight">150/100/50</p><p class="price">420.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Форель з овочами гриль</h4><p class="weight">250/100/50</p><p class="price">420.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Дорадо на грилі</h4><p class="weight">250/50/30</p><p class="price">420.00</p></div>
-</div><div class="menu-item"><img alt=""><div class="item-info"><h4>Скумбрія гриль з соусом тар-тар</h4><p class="weight">200/100/50/30</p><p class="price">320.00</p></div>
-</div> 
-  </article>
-  <!-- 🍕 Піца -->
-  <article class="category" id="pizza">
-   <h3>🍕 Піца</h3>
-   <div class="menu-item"><img alt=""><div class="item-info"><h4>Піца «Чотири сири»</h4><p class="weight">480</p><p class="price">260.00</p></div>
-  </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Піца «Маргарита»</h4><p class="weight">420</p><p class="price">205.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Піца «Пепероні»</h4><p class="weight">430</p><p class="price">235.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Піца «Гавайська»</h4><p class="weight">360</p><p class="price">240.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Піца «Барбекю»</h4><p class="weight">500</p><p class="price">285.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Піца «Прошутто»</h4><p class="weight">420</p><p class="price">295.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Піца «Цезар»</h4><p class="weight">530</p><p class="price">305.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Хачапурі з сулугуні</h4><p class="weight">350</p><p class="price">195.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Хачапурі по-аджарськи</h4><p class="weight">400</p><p class="price">215.00</p></div>
+
+  <div class="menu-item">
+    <img src="images/Запечені реберця зі свинини з картоплею.jpg" alt="Запечені реберця зі свинини з картоплею" loading="lazy">
+    <div class="item-info">
+      <h4>Запечені реберця зі свинини з картоплею</h4>
+      <p class="weight">280/100/50</p>
+      <p class="price">360.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Стейк зі свинячого ошийка.jpg" alt="Стейк зі свинячого ошийка" loading="lazy">
+    <div class="item-info">
+      <h4>Стейк зі свинячого ошийка</h4>
+      <p class="weight">230/50/120</p>
+      <p class="price">375.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Медальйони з свинини в беконі.jpg" alt="Медальйони з свинини в беконі з соусом деміглас" loading="lazy">
+    <div class="item-info">
+      <h4>Медальйони з свинини в беконі з соусом деміглас</h4>
+      <p class="weight">200/30/30</p>
+      <p class="price">375.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+  <img src="images/Телятина каре з овочами гріль.jpg" alt="Телятина каре з овочами гриль" loading="lazy">
+  <div class="item-info">
+    <h4>Телятина каре з овочами гриль</h4>
+    <p class="weight">200/50/60</p>
+    <p class="price">400.00</p>
+  </div>
 </div>
-  </article>
-  <!-- 🍔 Бургери -->
-  <article class="category" id="burgers">
-<h3>🍔 Бургери</h3>
-   <div class="menu-item"><img alt=""><div class="item-info"><h4>Бургер + картопля фрі</h4><p class="weight">280/40/100</p><p class="price">225.00</p></div>
-  </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Чізбургер + картопля фрі</h4><p class="weight">300/40/100</p><p class="price">240.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Чізбургер з беконом + картопля фрі</h4><p class="weight">320/40/100</p><p class="price">255.00</p></div>
+
+<div class="menu-item">
+  <img src="images/Біфстроганов з телятини.jpg" alt="Біфстроганов з телятини на подушці" loading="lazy">
+  <div class="item-info">
+    <h4>Біфстроганов з телятини на подушці</h4>
+    <p class="weight">280/100</p>
+    <p class="price">380.00</p>
+  </div>
 </div>
-  </article>
-  <!-- 👶 Дитяче меню -->
-  <article class="category" id="kids">
-<h3>👶 Дитяче меню</h3>
-   <div class="menu-item"><img alt=""><div class="item-info"><h4>Макарони та котлетка з курячого філе на пару, броколі та цвітна капуста на пару</h4><p class="weight">150/150/50</p><p class="price">245.00</p></div>
-  </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Картопляне пюре та шашличок із курки</h4><p class="weight">150/50</p><p class="price">235.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Запечене яблуко з медом та горіхами</h4><p class="weight">250</p><p class="price">120.00</p></div>
+
+<div class="menu-item">
+  <img src="images/Куряче стегно на грилі.jpg" alt="Куряче стегно на грилі" loading="lazy">
+  <div class="item-info">
+    <h4>Куряче стегно на грилі</h4>
+    <p class="weight">250/50/30</p>
+    <p class="price">285.00</p>
+  </div>
 </div>
-  </article>
-  <!-- 🍰 Десерти -->
-  <article class="category" id="desserts">
- <h3>🍰 Десерти</h3> <div class="menu-item"><img alt=""><div class="item-info"><h4>Сирники по-домашньому</h4><p class="weight">220/50</p><p class="price">175.00</p></div></div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Шоколадний фондан з морозивом</h4><p class="weight">90/40</p><p class="price">180.00</p></div></div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Млинці з маком та шоколадним соусом</h4><p class="weight">200/50</p><p class="price">155.00</p></div></div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Крем-брюле з карамельною скоринкою</h4><p class="weight">130/30</p><p class="price">165.00</p></div></div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Медовик / Наполеон</h4><p class="weight">150/30</p><p class="price">175.00</p></div></div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Яблунева тарта з морозивом</h4><p class="weight">230</p><p class="price">185.00</p></div></div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Морозиво в асортименті</h4><p class="weight">50</p><p class="price">70.00</p></div></div>
-  </article>
+
+<div class="menu-item">
+  <img src="images/Куряча грудка з моцарелою і томатами.jpg" alt="Куряча грудка з моцарелою і томатами під соусом песто" loading="lazy">
+  <div class="item-info">
+    <h4>Куряча грудка з моцарелою і томатами під соусом песто</h4>
+    <p class="weight">280</p>
+    <p class="price">360.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Кордон блю.jpg" alt="Кордон блю" loading="lazy">
+  <div class="item-info">
+    <h4>Кордон блю</h4>
+    <p class="weight">300/40/30</p>
+    <p class="price">345.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Курчата табака.jpg" alt="Курчата табака" loading="lazy">
+  <div class="item-info">
+    <h4>Курчата табака (на вагу)</h4>
+    <p class="weight">100/15</p>
+    <p class="price">95.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Качина грудка під винним соусом.jpg" alt="Качина грудка під винним соусом" loading="lazy">
+  <div class="item-info">
+    <h4>Качина грудка під винним соусом</h4>
+    <p class="weight">150/50/30</p>
+    <p class="price">380.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Філе лосося.jpg" alt="Філе лосося на подушці зі шпината" loading="lazy">
+  <div class="item-info">
+    <h4>Філе лосося на подушці зі шпината</h4>
+    <p class="weight">150/100/50</p>
+    <p class="price">420.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Форель з овочами гриль.jpg" alt="Форель з овочами гриль" loading="lazy">
+  <div class="item-info">
+    <h4>Форель з овочами гриль</h4>
+    <p class="weight">250/100/50</p>
+    <p class="price">420.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Дорадо на грилі.jpg" alt="Дорадо на грилі" loading="lazy">
+  <div class="item-info">
+    <h4>Дорадо на грилі</h4>
+    <p class="weight">250/50/30</p>
+    <p class="price">420.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Скумбрія гриль.jpg" alt="Скумбрія гриль з соусом тар-тар" loading="lazy">
+  <div class="item-info">
+    <h4>Скумбрія гриль з соусом тар-тар</h4>
+    <p class="weight">200/100/50/30</p>
+    <p class="price">320.00</p>
+  </div>
+</div>
+
+</article>
+
+<!-- 🍕 Піца -->
+<article class="category" id="pizza">
+  <h3>🍕 Піца</h3>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Піца «Чотири сири»" loading="lazy">
+    <div class="item-info">
+      <h4>Піца «Чотири сири»</h4>
+      <p class="weight">480</p>
+      <p class="price">260.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Піца «Маргарита»" loading="lazy">
+    <div class="item-info">
+      <h4>Піца «Маргарита»</h4>
+      <p class="weight">420</p>
+      <p class="price">205.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+  <img src="images/Піца Пепероні.jpg" alt="Піца «Пепероні»" loading="lazy">
+  <div class="item-info">
+    <h4>Піца «Пепероні»</h4>
+    <p class="weight">430</p>
+    <p class="price">235.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Піца Гавайська.jpg " alt="Піца «Гавайська»"  loading="lazy">
+  <div class="item-info">
+    <h4>Піца «Гавайська»</h4>
+    <p class="weight">360</p>
+    <p class="price">240.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Піца Барбекю.jpg" alt="Піца «Барбекю»" loading="lazy">
+  <div class="item-info">
+    <h4>Піца «Барбекю»</h4>
+    <p class="weight">500</p>
+    <p class="price">285.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Піца Прошутто.jpg" alt="Піца «Прошутто»" loading="lazy">
+  <div class="item-info">
+    <h4>Піца «Прошутто»</h4>
+    <p class="weight">420</p>
+    <p class="price">295.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Піца Цезарь.jpg" alt="Піца «Цезар»" loading="lazy">
+  <div class="item-info">
+    <h4>Піца «Цезар»</h4>
+    <p class="weight">530</p>
+    <p class="price">305.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Хачапурі з сулугуні.jpg" alt="Хачапурі з сулугуні" loading="lazy">
+  <div class="item-info">
+    <h4>Хачапурі з сулугуні</h4>
+    <p class="weight">350</p>
+    <p class="price">195.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Хачапурі по-аджарськи.jpg" alt="Хачапурі по-аджарськи" loading="lazy">
+  <div class="item-info">
+    <h4>Хачапурі по-аджарськи</h4>
+    <p class="weight">400</p>
+    <p class="price">215.00</p>
+  </div>
+</div>
+</article>
+
+<!-- 🍔 Бургери -->
+<article class="category" id="burgers">
+  <h3>🍔 Бургери</h3>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Бургер + картопля фрі" loading="lazy">
+    <div class="item-info">
+      <h4>Бургер + картопля фрі</h4>
+      <p class="weight">280/40/100</p>
+      <p class="price">225.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+  <img src="images/Чізбургер + картопля фрі.jpg" alt="Чізбургер + картопля фрі" loading="lazy">
+  <div class="item-info">
+    <h4>Чізбургер + картопля фрі</h4>
+    <p class="weight">300/40/100</p>
+    <p class="price">240.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Чізбургер з беконом + картопля фрі.jpg" alt="Чізбургер з беконом + картопля фрі" loading="lazy">
+  <div class="item-info">
+    <h4>Чізбургер з беконом + картопля фрі</h4>
+    <p class="weight">320/40/100</p>
+    <p class="price">255.00</p>
+  </div>
+</div>
+
+</article>
+
+<!-- 👶 Дитяче меню -->
+<article class="category" id="kids">
+  <h3>👶 Дитяче меню</h3>
+
+<div class="menu-item">
+  <img src="images/Макарони та котлетка з курячого філе.jpg" alt="Макарони та котлетка з курячого філе на пару, броколі та цвітна капуста на пару" loading="lazy">
+  <div class="item-info">
+    <h4>Макарони та котлетка з курячого філе на пару, броколі та цвітна капуста на пару</h4>
+    <p class="weight">150/150/50</p>
+    <p class="price">245.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Картопляне пюре та шашличок із курки.jpg" alt="Картопляне пюре та шашличок із курки" loading="lazy">
+  <div class="item-info">
+    <h4>Картопляне пюре та шашличок із курки</h4>
+    <p class="weight">150/50</p>
+    <p class="price">235.00</p>
+  </div>
+</div>
+
+<div class="menu-item">
+  <img src="images/Запечене яблуко з медом та горіхами.jpg" alt="Запечене яблуко з медом та горіхами" loading="lazy">
+  <div class="item-info">
+    <h4>Запечене яблуко з медом та горіхами</h4>
+    <p class="weight">250</p>
+    <p class="price">120.00</p>
+  </div>
+</div>
+</article>
+
+<!-- 🍰 Десерти -->
+<article class="category" id="desserts">
+  <h3>🍰 Десерти</h3>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Сирники по-домашньому" loading="lazy">
+    <div class="item-info">
+      <h4>Сирники по-домашньому</h4>
+      <p class="weight">220/50</p>
+      <p class="price">175.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Шоколадний фондан.jpg" alt="Шоколадний фондан з морозивом" loading="lazy">
+    <div class="item-info">
+      <h4>Шоколадний фондан з морозивом</h4>
+      <p class="weight">90/40</p>
+      <p class="price">180.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Млинці з маком.jpg" alt="Млинці з маком та шоколадним соусом" loading="lazy">
+    <div class="item-info">
+      <h4>Млинці з маком та шоколадним соусом</h4>
+      <p class="weight">200/50</p>
+      <p class="price">155.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Крем брюле.jpg" alt="Крем-брюле з карамельною скоринкою" loading="lazy">
+    <div class="item-info">
+      <h4>Крем-брюле з карамельною скоринкою</h4>
+      <p class="weight">130/30</p>
+      <p class="price">165.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Медовик.jpg" alt="Медовик" loading="lazy">
+    <div class="item-info">
+      <h4>Медовик</h4>
+      <p class="weight">150/30</p>
+      <p class="price">175.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="" alt="Наполеон" loading="lazy">
+    <div class="item-info">
+      <h4>Наполеон</h4>
+      <p class="weight">150/30</p>
+      <p class="price">175.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Яблунева тарта.jpg" alt="Яблунева тарта з морозивом" loading="lazy">
+    <div class="item-info">
+      <h4>Яблунева тарта з морозивом</h4>
+      <p class="weight">230</p>
+      <p class="price">185.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/placeholder.jpg" alt="Морозиво в асортименті" loading="lazy">
+    <div class="item-info">
+      <h4>Морозиво в асортименті</h4>
+      <p class="weight">50</p>
+      <p class="price">70.00</p>
+    </div>
+  </div>
+
+</article>
+
+
 <!-- 🥤 Напої -->
 <article class="category" id="drinks">
   <h3>🥤 Напої</h3>
@@ -800,46 +1453,148 @@
 </article>
 
 
-  <!-- 🎉 Банкетне меню -->
-  <article class="category" id="banquet">
-<h3>🎉 Банкетне меню</h3>
-   <div class="menu-item"><img alt=""><div class="item-info"><h4>Холодець</h4><p class="weight">400</p><p class="price">240.00</p></div>
-  </div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Оселедець під шубою</h4><p class="weight">300</p><p class="price">205.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Салат «Олів’є»</h4><p class="weight">300</p><p class="price">230.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Буженина</h4><p class="weight">100</p><p class="price">130.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Домашня ковбаса</h4><p class="weight">100</p><p class="price">125.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Запечена підчеревина</h4><p class="weight">100</p><p class="price">105.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>М’ясне асорті українське (буженина, рулет кур., підчер., дом. ковб.)</h4><p class="weight">400/60</p><p class="price">480.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Голубці</h4><p class="weight">300/50</p><p class="price">180.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Качка запечена з яблуками</h4><p class="weight">1 шт</p><p class="price">1150.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Рулька свинина запечена</h4><p class="weight">1 шт</p><p class="price">1100.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Щука фарширована</h4><p class="weight">100 г</p><p class="price">140.00</p></div>
-</div> <div class="menu-item"><img alt=""><div class="item-info"><h4>Жульєн у тарталетках</h4><p class="weight">4 шт</p><p class="price">178.00</p></div>
-</div>
-  </article>
-  <!-- 🍽️ Набори -->
-  <article class="category" id="sets">
-<h3>🍽️ Набори</h3>
+ <!-- 🎉 Банкетне меню -->
+<article class="category" id="banquet">
+  <h3>🎉 Банкетне меню</h3>
+
   <div class="menu-item">
+    <img src="images/Холодець.jpg" alt="Холодець" loading="lazy">
+    <div class="item-info">
+      <h4>Холодець</h4>
+      <p class="weight">400 г</p>
+      <p class="price">240.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Оселедець під шубою.jpg" alt="Оселедець під шубою" loading="lazy">
+    <div class="item-info">
+      <h4>Оселедець під шубою</h4>
+      <p class="weight">300 г</p>
+      <p class="price">205.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Салат Олівʼє.jpg" alt="Салат «Олів’є»" loading="lazy">
+    <div class="item-info">
+      <h4>Салат «Олів’є»</h4>
+      <p class="weight">300 г</p>
+      <p class="price">230.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Буженина.jpg" alt="Буженина" loading="lazy">
+    <div class="item-info">
+      <h4>Буженина</h4>
+      <p class="weight">100 г</p>
+      <p class="price">130.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Домашня ковбаса.jpg" alt="Домашня ковбаса" loading="lazy">
+    <div class="item-info">
+      <h4>Домашня ковбаса</h4>
+      <p class="weight">100 г</p>
+      <p class="price">125.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Запечена підчеревина.jpg" alt="Запечена підчеревина" loading="lazy">
+    <div class="item-info">
+      <h4>Запечена підчеревина</h4>
+      <p class="weight">100 г</p>
+      <p class="price">105.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/М’ясне асорті українське.jpg" alt="М’ясне асорті українське" loading="lazy">
+    <div class="item-info">
+      <h4>М’ясне асорті українське (буженина, рулет кур., підчер., дом. ковб.)</h4>
+      <p class="weight">400/60 г</p>
+      <p class="price">480.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Голубці.jpg" alt="Голубці" loading="lazy">
+    <div class="item-info">
+      <h4>Голубці</h4>
+      <p class="weight">300/50 г</p>
+      <p class="price">180.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Качка запечена з яблуками.jpg" alt="Качка запечена з яблуками" loading="lazy">
+    <div class="item-info">
+      <h4>Качка запечена з яблуками</h4>
+      <p class="weight">1 шт</p>
+      <p class="price">1150.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Рулька свинина запечена.jpg" alt="Рулька свинина запечена" loading="lazy">
+    <div class="item-info">
+      <h4>Рулька свинина запечена</h4>
+      <p class="weight">1 шт</p>
+      <p class="price">1100.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Щука фарширована.jpg" alt="Щука фарширована" loading="lazy">
+    <div class="item-info">
+      <h4>Щука фарширована</h4>
+      <p class="weight">100 г</p>
+      <p class="price">140.00</p>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/Жульєн у тарталетках.jpg" alt="Жульєн у тарталетках" loading="lazy">
+    <div class="item-info">
+      <h4>Жульєн у тарталетках</h4>
+      <p class="weight">4 шт</p>
+      <p class="price">178.00</p>
+    </div>
+  </div>
+
+</article>
+
+<!-- 🍽️ Набори -->
+<article class="category" id="sets">
+  <h3>🍽️ Набори</h3>
+
+  <div class="menu-item">
+    <img src="images/Набір SunCity №1.jpg" alt="Набір «SunCity» №1" loading="lazy">
     <div class="item-info">
       <h4>Набір «SunCity» №1</h4>
       <p class="composition">Шашлик зі свинини 500 г, шашлик з кур. стегна 500 г, каре телятини 500 г, картопля з салом 500 г, лаваш з сиром сулугуні, соус барбекю</p>
-      <p class="weight"> 2250</p>
+      <p class="weight">2250 г</p>
       <p class="price">2480.00</p>
     </div>
   </div>
+
   <div class="menu-item">
+    <img src="images/Набір SunCity 2.jpg" alt="Набір «SunCity» №2" loading="lazy">
     <div class="item-info">
       <h4>Набір «SunCity» №2</h4>
       <p class="composition">Кур. крило, ш-к з кур. грудки, ковбаски гриль, ш-к свин., картопляні дольки</p>
-      <p class="weight">1100/90</p>
+      <p class="weight">1100/90 г</p>
       <p class="price">1350.00</p>
     </div>
   </div>
-  </article>
-</section>
+
+</article>
+
 <!-- Footer / CTA с фоном -->
-<footer class="menu-footer-cta" style="background-image: url(images/4.jpg); background-size: cover; background-position: center; color: white; padding: 50px 20px;">
+<footer class="menu-footer-cta" style="background-image: url(images/footer.jpg); background-size: cover; background-position: center; color: white; padding: 50px 20px;">
   <!-- CTA -->
   <div class="cta-section" style="text-align: center; margin-bottom: 40px;">
     <h2>Готові зробити замовлення?</h2>
@@ -867,8 +1622,5 @@
     </div>
   </div>
 </footer>
-</body>
-</html>
-</section>
 </body>
 </html>

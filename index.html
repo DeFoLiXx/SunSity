@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sun City Cafe</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="images/logo.jpg" alt="SUN CITY">
+  </div>
+  <a href="tel:+380689346464" class="btn-call">📞 Дзвонити</a>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Sun City</h1>
+    <p>Смачно • Затишно • Домашньо</p>
+    <div class="hero-buttons">
+      <a href="menu.html" class="btn btn-primary">🍴 Переглянути меню</a>
+      <a href="tel:+380689346464" class="btn btn-secondary">📞 068 934 64 64</a>
+    </div>
+  </div>
+</section>
+
+<section class="banquets">
+  <h2 class="section-header">Банкети та святкування</h2>
+
+  <!-- Основний зал -->
+  <div class="hall">
+    <h3>Основний зал</h3>
+    <div class="media-grid">
+      <video src="images/осн11.mp4" controls></video>
+      <video src="images/осн22.mp4" controls></video>
+      <a href="images/осн1.jpg" target="_blank"><img src="images/осн1.jpg" alt="Фото основного залу"></a>
+      <a href="images/осн2.jpg" target="_blank"><img src="images/осн2.jpg" alt="Фото основного залу"></a>
+    </div>
+    <div class="divider"></div>
+  </div>
+
+  <!-- Банкетний зал -->
+  <div class="hall">
+    <h3>Банкетний зал</h3>
+    <div class="media-grid">
+      <a href="images/бнк1.jpg" target="_blank"><img src="images/бнк1.jpg" alt="Фото банкетного залу"></a>
+      <a href="images/бнк2.jpg" target="_blank"><img src="images/бнк2.jpg" alt="Фото банкетного залу"></a>
+    </div>
+    <div class="divider"></div>
+  </div>
+
+  <!-- Бар -->
+  <div class="hall">
+    <h3>Бар</h3>
+    <div class="media-grid">
+      <a href="images/бар.jpg" target="_blank"><img src="images/бар.jpg" alt="Фото бару"></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Главная страница футер -->
+<footer class="footer main-footer">
+  <div class="footer-overlay"></div>
+  <div class="footer-content">
+    <div class="footer-block">
+      <h3>Контакти</h3>
+      <p>📞 <a href="tel:+380689346464">068 934 64 64</a></p>
+      <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Sun+City+cafe" target="_blank">
+        вул. Метрологічна, 48, Київ
+      </a></p>
+      <p>🕒 Пн–Нд: 10:00 – 21:00</p>
+    </div>
+    <div class="footer-block">
+      <h3>Наші послуги</h3>
+      <ul>
+        <li>🍴 Їжа на винос</li>
+        <li>💳 Безготівкова оплата</li>
+        <li>📱 NFC-платежі</li>
+        <li>👨‍👩‍👧 Сімейне середовище</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Sun City Cafe</div>
+</footer>
+
+
+<script>
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  let index = 0;
+
+  document.querySelector('.next').onclick = () => move(1);
+  document.querySelector('.prev').onclick = () => move(-1);
+
+  function move(step) {
+    index = (index + step + images.length) % images.length;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+</script>
+
+</body>
+</html>

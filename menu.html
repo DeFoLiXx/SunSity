@@ -325,6 +325,7 @@
     <div class="mini-card" onclick="document.getElementById('hot-snacks').scrollIntoView({behavior: 'smooth'})">🔥 Гарячі закуски</div>
     <div class="mini-card" onclick="document.getElementById('soups').scrollIntoView({behavior: 'smooth'})">🍲 Перші страви</div>
     <div class="mini-card" onclick="document.getElementById('salads').scrollIntoView({behavior: 'smooth'})">🥗 Салати</div>
+    <div class="mini-card" onclick="document.getElementById('garnish').scrollIntoView({behavior: 'smooth'})">🥔 Гарніри</div>
     <div class="mini-card" onclick="document.getElementById('grill').scrollIntoView({behavior: 'smooth'})">🍖 Страви на мангалі</div>
     <div class="mini-card" onclick="document.getElementById('hotdishes').scrollIntoView({behavior: 'smooth'})">🍛 Гарячі страви</div>
     <div class="mini-card" onclick="document.getElementById('pizza').scrollIntoView({behavior: 'smooth'})">🍕 Піца</div>
@@ -335,6 +336,7 @@
     <div class="mini-card" onclick="document.getElementById('drinks').scrollIntoView({behavior: 'smooth'})">🥤 Напої</div>
     <div class="mini-card" onclick="document.getElementById('banquet').scrollIntoView({behavior: 'smooth'})">🎉 Банкетне меню</div>
     <div class="mini-card" onclick="document.getElementById('sets').scrollIntoView({behavior: 'smooth'})">🍽️ Набори</div>
+    
   </div>
 
   <!-- Правая стрелка 
@@ -879,7 +881,83 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
 </article>
+<!-- 🥔 Гарніри -->
+<article class="category" id="garnish">
+  <h3>🥔 Гарніри</h3>
 
+  <div class="menu-item" data-id="garnish-1">
+    <img src="images/фрі.jpg" alt="Картопля фрі " loading="lazy">
+    <div class="item-info">
+      <h4>Картопля фрі</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-id="garnish-2">
+    <img src="images/Картопля дольки.jpg" alt="Картопля дольки" loading="lazy">
+    <div class="item-info">
+      <h4>Картопля дольки</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-id="garnish-3">
+    <img src="images/дольки часник.jpg" alt="Картопля дольки з часником та зеленню" loading="lazy">
+    <div class="item-info">
+      <h4>Картопля дольки з часником та зеленню</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-id="garnish-4">
+    <img src="images/Картопля по селянському з під черевеною.jpg" alt="Картопля по-селянськи з підчеревиною" loading="lazy">
+    <div class="item-info">
+      <h4>Картопля по-селянськи з підчеревиною</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-id="garnish-5">
+    <img src="images/пюре.jpg" alt="Картопляне пюре" loading="lazy">
+    <div class="item-info">
+      <h4>Картопляне пюре</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-id="garnish-6">
+    <img src="images/рис з овочами.jpg" alt="Рис з овочами" loading="lazy">
+    <div class="item-info">
+      <h4>Рис з овочами</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-id="garnish-7">
+    <img src="images/гречка гриби.jpg" alt="Гречка з грибами" loading="lazy">
+    <div class="item-info">
+      <h4>Гречка з грибами</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+  <div class="menu-item" data-id="garnish-8">
+    <img src="images/Овочі гриль.jpg" alt="Овочі гриль" loading="lazy">
+    <div class="item-info">
+      <h4>Овочі гриль</h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
+
+</article>
 <!-- 🍖 Страви на мангалі -->
 <article class="category" id="grill">
   <h3>🍖 Страви на мангалі</h3>
@@ -1561,6 +1639,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="price">750.00</p>
     </div>
   </div>
+
 <div class="menu-item" data-id="drinks-alc-wine-5">
   <div class="item-info">
     <h4>KVAZI АЛАЗ ДОЛ червоне / нсол</h4>
@@ -1580,7 +1659,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="menu-item" data-id="drinks-alc-wine-7">
   <div class="item-info">
     <h4>MARTINI ASTI ігристе</h4>
-    <p class="weight">1 бут.</p>
+    <p class="weight">1 пл</p>
     <p class="price">1050.00</p>
   </div>
 </div>
@@ -1596,17 +1675,10 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="menu-item" data-id="drinks-alc-wine-9">
   <div class="item-info">
     <h4>MARENGO ігр біле / нс</h4>
-    <p class="weight">1 бут.</p>
+    <p class="weight">1 пл</p>
     <p class="price">420.00</p>
   </div>
 </div>
-
-<div class="menu-item" data-id="drinks-alc-wine-10">
-  <div class="item-info">
-    <h4>MARENGO ігр біле / нсол</h4>
-    <p class="weight">1 бут.</p>
-    <p class="price">420.00</p>
-  </div>
 </div>
   <!-- Горілка -->
   <h5>Горілка</h5>
@@ -1709,7 +1781,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 <div class="menu-item" data-id="drinks-alc-beer-3">
   <div class="item-info">
-    <h4>Пиво Львівське 1715</h4>
+    <h4>Львівське 1715</h4>
     <p class="weight">300 мл</p>
     <p class="price">55.00</p>
   </div>
@@ -1717,7 +1789,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <div class="menu-item" data-id="drinks-alc-beer-4">
   <div class="item-info">
-    <h4>Пиво Lwivske Eksportowe</h4>
+    <h4>Lwivske Eksportowe</h4>
     <p class="weight">500 мл</p>
     <p class="price">70.00</p>
   </div>
@@ -1725,7 +1797,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <div class="menu-item" data-id="drinks-alc-beer-5">
   <div class="item-info">
-    <h4>Пиво Карлсберг б/а</h4>
+    <h4>Карлсберг б/а</h4>
     <p class="weight">450 мл</p>
     <p class="price">80.00</p>
   </div>
@@ -1733,7 +1805,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <div class="menu-item" data-id="drinks-alc-beer-6">
   <div class="item-info">
-    <h4>Пиво Кроненбург бланш</h4>
+    <h4>Кроненбург бланш</h4>
     <p class="weight">460 мл</p>
     <p class="price">95.00</p>
   </div>
@@ -1741,7 +1813,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <div class="menu-item" data-id="drinks-alc-beer-7">
   <div class="item-info">
-    <h4>Пиво Лев темне</h4>
+    <h4>Лев темне</h4>
     <p class="weight">500 мл</p>
     <p class="price">75.00</p>
   </div>
@@ -1749,11 +1821,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <div class="menu-item" data-id="drinks-alc-beer-8">
   <div class="item-info">
-    <h4>Пиво Кроненбург 1664</h4>
+    <h4>Кроненбург 1664</h4>
     <p class="weight">300 мл</p>
     <p class="price">70.00</p>
   </div>
 </div>
+
 </article>
 
 <!-- 🎉 Банкетне меню -->

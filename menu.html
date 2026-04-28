@@ -245,6 +245,53 @@
    flex-direction: column;
     align-items: center; } 
   }
+/* Новинки — яркая карточка */
+.new-items-card {
+  position: relative;
+  background: linear-gradient(135deg, #ff7f50, #ff3c00);
+  color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(255, 60, 0, 0.4);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Бейдж */
+.new-items-card .badge {
+  position: absolute;
+  top: 15px;
+  right: -40px;
+  background: #000;
+  color: #fff;
+  padding: 5px 50px;
+  font-size: 0.8rem;
+  transform: rotate(45deg);
+}
+
+/* Текст */
+.new-items-card h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.new-items-card .price {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+
+
+/* 📱 Мобилка */
+@media (max-width: 768px) {
+  .complex-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
  </style>
 </head>   
 <body> 
@@ -254,34 +301,46 @@
   </div>
  <a href="tel:0689346464" class="btn-call">📞 Дзвонити</a>
 </header> 
-  <!-- Hero / Наше меню -->
+<!-- Hero / Наше меню -->
 <section class="menu-hero">
   <div class="overlay"></div>
+
   <div class="menu-content">
     <div class="icon">🍽️</div>
     <h1>Наше меню</h1>
     <hr class="menu-divider">
     <p>Вишукані страви, приготовані з любов'ю та увагою до кожної деталі</p>
 
-    <!-- Комплексний обід внутри большой карточки -->
-    <div class="complex-lunch-card" data-id="complex-lunch">
-      <h2></h2>
-      <p class="composition"></p>
-      <p class="price"></p>
+    <!-- ОБЁРТКА ДЛЯ 2 КАРТОЧЕК -->
+    <div class="complex-wrapper">
+
+      <!-- Комплексный обед -->
+      <div class="complex-lunch-card" data-id="complex-lunch">
+        <h2></h2>
+        <p class="composition"></p>
+        <p class="price"></p>
+      </div>
+
+      <!-- Новинки -->
+      <div class="new-items-card">
+        <div class="badge">🔥 НОВИНКИ</div>
+        <h2>Нові страви</h2>
+        <div class="new-items-list"></div>
+      </div>
+
     </div>
+
   </div>
 </section>
-
-
 <style>
-/* Hero фон уже есть, overlay для затемнения */
+/* ===== HERO ===== */
 .menu-hero {
   background: #ddd url('images/hall.jpg') center/cover no-repeat;
   height: auto;
-  padding: 60px 20px 40px 20px; /* чтобы была высота и место под карточку */
+  padding: 60px 20px 40px 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* начало сверху */
+  align-items: flex-start;
   text-align: center;
   color: #fff;
   position: relative;
@@ -290,26 +349,109 @@
 .menu-content {
   position: relative;
   z-index: 1;
-  max-width: 900px; /* чтобы не растягивалось */
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.complex-lunch-card {
-  background: #fff; /* белый фон */
-  color: #000;      /* текст чёрный */
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 400px;
-  margin: 20px auto 0 auto; /* центрирование и отступ сверху */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+/* ===== WRAPPER (2 КАРТОЧКИ) ===== */
+.complex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  padding: 0 15px;
+  width: 100%;
 }
+
+/* ===== ОБЩИЕ КАРТОЧКИ ===== */
+.complex-lunch-card,
+.new-items-card {
+  flex: 1;
+  max-width: 400px;   /* ✔ фикс: был баг без ; */
+  height: fit-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+/* ===== КОМПЛЕКСНЫЙ ОБЕД ===== */
+.complex-lunch-card {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .complex-lunch-card h2 {
   margin: 0 0 10px 0;
 }
+
 .complex-lunch-card .price {
   font-weight: bold;
   font-size: 1.2rem;
   margin-top: 10px;
+}
+
+/* убираем пустые блоки */
+.complex-lunch-card p {
+  margin: 0;
+}
+
+.complex-lunch-card p:empty {
+  display: none;
+}
+
+/* ===== НОВИНКИ ===== */
+.new-items-card {
+  position: relative;
+  background: linear-gradient(135deg, #ff7f50, #ff3c00);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 60, 0, 0.4);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* список блюд */
+.new-items-list {
+  margin-top: 10px;
+}
+
+/* строка блюда */
+.new-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* бейдж */
+.new-items-card .badge {
+  position: absolute;
+  top: 15px;
+  right: -40px;
+  background: #000;
+  color: #fff;
+  padding: 5px 50px;
+  font-size: 0.8rem;
+  transform: rotate(45deg);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .complex-wrapper {
+    flex-direction: column;
+    align-items: center;     /* центр по горизонтали */
+    justify-content: center; /* центр по вертикали (если есть высота) */
+    text-align: center;
+  }
+
+  .complex-lunch-card,
+  .new-items-card {
+    width: 100%;
+    max-width: 350px; /* немного уже для аккуратного вида */
+    margin: 0 auto;   /* дополнительная центровка */
+  }
 }
 </style> 
 <div class="mini-cards-wrapper">
@@ -335,8 +477,6 @@
     <div class="mini-card" onclick="document.getElementById('desserts').scrollIntoView({behavior: 'smooth'})">🍰 Десерти</div>
     <div class="mini-card" onclick="document.getElementById('drinks').scrollIntoView({behavior: 'smooth'})">🥤 Напої</div>
     <div class="mini-card" onclick="document.getElementById('banquet').scrollIntoView({behavior: 'smooth'})">🎉 Банкетне меню</div>
-    <div class="mini-card" onclick="document.getElementById('sets').scrollIntoView({behavior: 'smooth'})">🍽️ Набори</div>
-    
   </div>
 
   <!-- Правая стрелка 
@@ -1060,7 +1200,24 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="price"></p>
     </div>
   </div>
+  <div class="menu-item" data-id="grill-12">
+    <img src="images/placeholder.jpg" alt="Набір «SunCity»№1" loading="lazy">
+    <div class="item-info">
+      <h4></h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+    </div>
+  </div>
 
+  <div class="menu-item" data-id="grill-13">
+    <img src="images/placeholder.jpg" alt="Набір «SunCity»№2" loading="lazy">
+    <div class="item-info">
+      <h4></h4>
+      <p class="weight"></p>
+      <p class="price"></p>
+      
+    </div>
+  </div>
 </article>
 
 <!-- 🍝 Гарячі страви -->
@@ -1943,32 +2100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </article>
 
- <!-- 🍽️ Набори -->
-<article class="category" id="sets">
-  <h3>🍽️ Набори</h3>
-
-  <div class="menu-item" data-id="sets-1">
-    <img src="images/placeholder.jpg" alt="Набір «SunCity» №1" loading="lazy">
-    <div class="item-info">
-      <h4>Набір «SunCity» №1</h4>
-      <p class="composition">Шашлик зі свинини 500 г, шашлик з кур. стегна 500 г, каре телятини 500 г, картопля з салом 500 г, лаваш з сиром сулугуні, соус барбекю</p>
-      <p class="weight">2250 г</p>
-      <p class="price">2480.00</p>
-    </div>
-  </div>
-
-  <div class="menu-item" data-id="sets-2">
-    <img src="images/Набір SunCity 2.jpg" alt="Набір «SunCity» №2" loading="lazy">
-    <div class="item-info">
-      <h4>Набір «SunCity» №2</h4>
-      <p class="composition">Кур. крило, ш-к з кур. грудки, ковбаски гриль, ш-к свин., картопляні дольки</p>
-      <p class="weight">1100/90 г</p>
-      <p class="price">1350.00</p>
-    </div>
-  </div>
-
-</article>
-
 <!-- Страница меню -->
 <section class="cta-section">
   <h2>Готові зробити замовлення?</h2>
@@ -2002,5 +2133,8 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
   <div class="footer-bottom">© 2026 Sun City Cafe</div>
 </footer>
+<button id="scrollTopBtn" aria-label="Наверх">
+  ↑
+</button>
 </body>
 </html>

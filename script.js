@@ -123,3 +123,66 @@ window.addEventListener('DOMContentLoaded', () => {
   loadMenu();
   loadComplexLunch();
 });
+async function loadNewItems() {
+
+  const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT0skexkX_6UAWqnCQdK-47rla8vPXhbr_Gn86e7O5dTzJaH6k2BlpBzQbf7xDoT3adsfLvJDuHHwTa/pub?output=csv';
+
+  const response = await fetch(csvUrl);
+  const csvText = await response.text();
+
+  const rows = csvText.trim().split('\n');
+  const headers = rows[0].split(',');
+
+  const data = rows.slice(1).map(row => {
+    const values = row.split(',');
+    const obj = {};
+
+    headers.forEach((h, i) => {
+      obj[h.trim()] = values[i] ? values[i].trim() : '';
+    });
+
+    return obj;
+  });
+
+  const container = document.querySelector('.new-items-list');
+
+  data.forEach(item => {
+    const el = document.createElement('div');
+    el.classList.add('new-item');
+
+    el.innerHTML = `
+      <div class="left">
+        <span class="name">${item.name}</span>
+      </div>
+
+      <div class="center">
+        ${item.weight ? item.weight + ' ' + (item.unit || '') : ''}
+      </div>
+
+      <div class="right">
+        ${item.price ? item.price + ' грн' : ''}
+      </div>
+    `;
+
+    container.appendChild(el);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', loadNewItems);
+
+const btn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+});
+
+btn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
